@@ -15,11 +15,6 @@ class User(BaseModel):
     age: int
 
 
-class UserCreate(BaseModel):
-    username: str
-    age: int
-
-
 @app.get("/users", response_model=List[User])
 async def get_users():
     return users
